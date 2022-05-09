@@ -1,4 +1,4 @@
-// Add Code Here
+// Pseudocode Outline:
 
 // define variables
 

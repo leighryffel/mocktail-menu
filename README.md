@@ -1,3 +1,11 @@
-#Em and Leigh's Project
+# Em and Leigh's Project
 
-Hello this is a test
+## Basic Story
+
+Core Features of MVP
+
+API Data We Will Use
+
+Challenges Expected
+
+Requirements Met

@@ -12,9 +12,9 @@ We want to create an app that makes popular mocktails accessible, displays their
  - Form of some kind that uploads a new drink and persists
 
 ## API Data We Will Use
-www.thecocktaildb.com/api/
-www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
-www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=1
+* www.thecocktaildb.com/api/
+* www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
+* www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=1
 
 ## Challenges Expected
 We want to fetch all of the non-alcoholic drinks from the Cocktail API, but after fetching their IDs, we will need to run a second fetch() to get all of the actual drink information/ingredients/etc.

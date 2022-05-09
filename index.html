@@ -3,14 +3,46 @@
 
 <!-- Head Section With Source Links -->
   <head>
-      <link rel="stylesheet" src="/styles.css">
+      <link rel="stylesheet" href="styles/styles.css">
       <script src="./src/index.js"></script>
       <title>Phase 1 Project: Making Mocktails</title>
   </head>
 
   <!-- Body Section with Page Content -->
   <body>
-  <h1>Making Mocktails</h1>
+    <header>
+      <h1>Making Mocktails</h1>
+      <nav>
+        <ul id="drink-list">
+          <li>Drink Name</li>
+          <li>Another Drink Name</li>
+          <li>And Another Drink Name</li>
+        </ul>
+     </nav>
+    </header>
+
+    <div id="drink-menu">
+      <p>TEST!</p>
+    </div>
+  
+    <!-- Drink Details -->
+    <div id="drink-detail">
+      <h2 class="name">Insert Name Here</h2>
+      <img class="detail-image" src="./images/placeholder.png" alt="Insert Name Here" />
+      <h3 class="restaurant">Insert Restaurant Here</h3>
+    </div>
+  
+    <h3>Rating:</h3>
+    <p>
+      <span id='rating-display'>Insert rating here</span> / 10
+    </p>
+
+    <form id="search-bar">
+      <label for="search">Search for a drink</label>
+      <textarea id="search"></textarea>
+      <button type="submit">Search</button>
+    </form>
   </body>
+  
 </html>
 

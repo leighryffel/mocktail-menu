@@ -1,7 +1,7 @@
 # Em and Leigh's Project
 
 ## Basic Story
-We want to create an app that makes popular mocktails accessible, displayes their ingredient lists, a recipe for mixing the drink, and necessary equipment. We want users to be able to see pictures of all of the drinks, click on a particular drink, and view its recipe. We also want users to be able to search for a particular ingredient and view all drinks that contain that ingredient.
+We want to create an app that makes popular mocktails accessible, displays their ingredient lists, a recipe for mixing the drink, and necessary equipment. We want users to be able to see pictures of all of the drinks, click on a particular drink, and view its recipe. We also want users to be able to search for a particular ingredient and view all drinks that contain that ingredient.
 
 ## Core Features of MVP
  - Search Bar

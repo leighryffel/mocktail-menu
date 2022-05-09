@@ -11,3 +11,8 @@
 // create event listener to run the fetch functions after the DOM loads
 
 // create function to put information from the fetched mocktails in the browser
+
+// Idea from the database creator:
+// Use the filters for ingredients and create category buttons in your 
+// app. Then list the cocktails to browse, then do another lookup on the
+// ID once a user clicks on the cocktail for the details.

@@ -2,10 +2,10 @@
 
 ## Basic Story
 
-Core Features of MVP
+## Core Features of MVP
 
-API Data We Will Use
+## API Data We Will Use
 
-Challenges Expected
+## Challenges Expected
 
-Requirements Met
+## Requirements Met

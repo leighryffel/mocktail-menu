@@ -22,4 +22,8 @@ We want to fetch all of the non-alcoholic drinks from the Cocktail API, but afte
 2. App will run on a single page, with no redirects, with a single HTML file.
 3. Event listeners will include searching, toggling between drinks when clicked, buttons to bring up a list of filtered drinks.
 4. Iterate throguh all of the mocktails to get their ID, then pull their data by ID.
+<<<<<<< HEAD
 5. We will be so good at following the coding practice
+=======
+5. We will be so good at following the coding practices!
+>>>>>>> f0b7079d5ea4e259de96676033040f6c02f489d6

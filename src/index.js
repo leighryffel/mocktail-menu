@@ -1,5 +1,5 @@
 // Pseudocode Outline:
-
+console.log('add something')
 console.log("this came from leigh!")
 // define variables
 // write fetch request to collect data for all non-alcoholic drinks from cocktail API

@@ -1,8 +1,25 @@
 //attempt 1 to append to div at top of page
 
-fetch('www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => renderDrinks(data))
+
+
+
+    function renderDrinks (data) {
+        for(const element in data) {
+            console.log(data.key['strDrinkThumb'])
+
+
+        let drinkMenu = document.getElementById('drink-menu')
+       let cakeImages = data.strDrinkThumb
+        // drinkMenu.append()
+        }
+    
+    }
+
+
+
 
 
 

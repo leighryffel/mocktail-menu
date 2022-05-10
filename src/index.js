@@ -1,9 +1,22 @@
+//attempt 1 to append to div at top of page
+
+fetch('www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+    .then(res => res.json())
+    .then(data => console.log(data))
+
+
+
+
+
+
+
+
 // Pseudocode Outline:
-console.log('add something')
-console.log("this came from leigh!")
+
+
 // define variables
 // write fetch request to collect data for all non-alcoholic drinks from cocktail API
-// fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+// fetch('www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
 //     .then(res => res.json())
 //     .then(data => getDrinkId(data))
 

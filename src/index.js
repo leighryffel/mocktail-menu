@@ -24,5 +24,8 @@ function renderDrink(data) {
         newImg.className = "menu-image";
         newImg.src = nestedDrinks[i].strDrinkThumb;
         drinkImageMenu.appendChild(newImg);
+        //  listener on click
+        // get drink ID
+        // fetch API using the ID
     };
 };

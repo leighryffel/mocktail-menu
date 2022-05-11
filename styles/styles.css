@@ -1,10 +1,11 @@
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 14px;
   background-color: rgb(157, 216, 184);
   width: auto;
+  padding: 10px;
 }
 
 header {
@@ -20,25 +21,19 @@ h1 {
   font-size: 52px;
   color: rgb(230, 141, 236);
   margin: 10px 0;
-  font-family: "Great Vibes";
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  padding: 10px;
 }
 
-h2 { 
-  font-family: "Great Vibes";
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style: none;
+.name h2 { 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
 }
 
 main {
   float: center;
-  /* margin-left: 100px; */
+  margin-left: 100px;
   width: 200px;
 }
 
@@ -48,13 +43,19 @@ main {
   overflow-x: auto;
   margin: 1rem 0;
   max-width: calc(100vw - 2rem);
+  cursor: all-scroll;
+}
+
+#welcome {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:larger;
 }
 
 #drink-menu img {
   flex: 0 1 auto;
   height: 150px;
   margin-right: 0.5rem;
-  cursor: pointer;
+  cursor: all-scroll;
 }
 
 #drink-menu img:last-child {
@@ -94,8 +95,8 @@ form {
 
 textarea {
   display: block;
-  width: 100%;
-  height: 100px;
+  width: 40%;
+  height: 10px;
   border: 1px solid gray;
   padding: 5px;
   font-size: 14px;
@@ -104,11 +105,25 @@ textarea {
 
 form button[type="submit"] {
   border: none;
+  font-family: Georgia;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  background-color: cornflowerblue;
-  color: #fff;
+  background-color: rgb(237, 118, 89);
+  color: rgb(0, 0, 0);
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+#random-button{
+  border: none;
+  font-family: Georgia;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: rgb(237, 118, 89);
+  color: rgb(0, 0, 0);
   padding: 7px 10px;
   cursor: pointer;
 }
@@ -119,7 +134,5 @@ form button[type="submit"] {
 
 .drink-detail {
     display: block;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     width: 75%;
 }

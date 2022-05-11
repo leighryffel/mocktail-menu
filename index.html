@@ -11,19 +11,16 @@
 <!-- Body Section with Page Content -->
   <body>
     <header>
-      <h1>Making Mocktails</h1>
+      <h1 id="title">Making Mocktails</h1>
     </header>
 
-    <!-- Search Bar -->
-  
-    
-    <!-- Drink Details -->
-      <button type="submit" id="random-button">Generate Random Cocktail</button>
-      <div id="drink-detail">
-        <h2 class="name">Insert Drink Name Here</h2>
-        <img class="detail-image"  alt="Insert Name Here" />
-        <h3 class="ingredients">Insert Ingredients Here</h3>
-      
+    <!-- Random Cocktail Generator -->
+    <p id="welcome">Use this site to get cocktail inspiration, or choose a mocktail from our photo menu. User-submitted recipes encouraged!</p>
+    <button type="button" id="random-button">Show Me a Random Cocktail!</button>
+    <div id="drink-detail">
+      <h2 class="name">Insert Drink Name Here</h2>
+      <img class="detail-image" alt="Insert Name Here" />
+      <h3 class="ingredients" id="ingredients-list"></h3>
       <h3>Recipe</h3>
       <p>
         <span id='recipe-display'>Insert recipe here</span>
@@ -34,11 +31,20 @@
       <h3>Click on a Mocktail to View Recipe</h3>
       <div id="drink-menu"></div>
 
-      <form id="search-bar">
-        <label for="search">Search for a drink</label>
-        <textarea id="search"></textarea>
-        <button type="submit">Search</button>
+      <div id=new-mocktail>
+      <h3>Submit a New Mocktail Recipe</h3>
+      <form id="add-new-form">
+        <label for="new-name">Enter Mocktail Name</label>
+        <textarea id="new-name"></textarea>
+        <label for="new-ingredients">Enter Ingredients</label>
+        <textarea id="new-ingredients"></textarea>
+        <label for="new-instructions">Enter Recipe Instructions</label>
+        <textarea id="new-instructions"></textarea>
+        <label for="new-image">Add Image URL</label>
+        <textarea id="new-image"></textarea>
+        <button type="submit">Submit Mocktail</button>
       </form>
+    </div>
   </body>
   
 </html>

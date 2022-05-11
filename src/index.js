@@ -1,11 +1,11 @@
 // define global variables
 const drinkImageMenu = document.querySelector('#drink-menu');
 
-const newMocktail = document.getElementById("add-new-form");
-const newName = document.querySelector('#new-name');
-const newImage = document.querySelector('#new-image');
-const newIngredients = document.querySelector('#new-ingredients');
-const newInstructions = document.querySelector('#new-instructions');
+const userInputMocktail = document.getElementById("add-new-form");
+const userInputName = document.querySelector('#new-name');
+const userInputImage = document.querySelector('#new-image');
+const userInputIngredients = document.querySelector('#new-ingredients');
+const userInputInstructions = document.querySelector('#new-instructions');
 
 const randomButton = document.querySelector("#random-button");
 
@@ -20,7 +20,7 @@ const drinkIngredientsUl = document.querySelector('#ingredients-list')
 document.addEventListener('DOMContentLoaded', function() {
     fetchRandomCocktail();
     fetchMocktails();
-    newMocktail.addEventListener('submit', createNewMocktail);
+    userInputMocktail.addEventListener('submit', createNewMocktail);
     randomButton.addEventListener('click', fetchRandomCocktail);
 })
 
@@ -166,16 +166,15 @@ function addDrinkToMenu(data) {
 
 const createNewMocktail = event => {
     event.preventDefault();
-    const newMocktail = {
-        "strDrink": newName.value,
-        "strIngredient1": newIngredients.value,
-        "strDrinkThumb": newImage.value,
-        "strInstructions": newInstructions.value,
+    const userInputMocktail = {
+        "strDrink": userInputName.value,
+        "strIngredient1": userInputIngredients.value,
+        "strDrinkThumb": userInputImage.value,
+        "strInstructions": userInputInstructions.value,
         "idDrink" : (Math.random(0))*100
     }
-    if (newName.value) {
-        addUserDrink(newMocktail)
-        // newMocktail.addEventListener('click', featureUserDrink)
+    if (userInputName.value) {
+        addUserDrink(userInputMocktail)
     }
 }
 
@@ -184,6 +183,10 @@ function addUserDrink(data) {
     newImg.className = "menu-image";
     newImg.src = data.strDrinkThumb;
     drinkImageMenu.prepend(newImg);
+    userInputName.value = ""
+    userInputImage.value = ""
+    userInputIngredients.value = ""
+    userInputInstructions.value = ""
 }
 
 function featureUserDrink(data){

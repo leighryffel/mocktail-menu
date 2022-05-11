@@ -1,9 +1,39 @@
+//attempt 1 to append to div at top of page
+
+fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+    .then(res => res.json())
+    .then(data => renderDrinks(data))
+
+
+
+    function renderDrinks (data) {
+        for(const element in data) {
+            console.log(data.key['strDrinkThumb'])
+
+
+        let drinkMenu = document.getElementById('drink-menu')
+       let cakeImages = data.strDrinkThumb
+        // drinkMenu.append()
+        }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
 // Pseudocode Outline:
-console.log('add something')
-console.log("this came from leigh!")
+
+
 // define variables
 // write fetch request to collect data for all non-alcoholic drinks from cocktail API
-// fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
+// fetch('www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
 //     .then(res => res.json())
 //     .then(data => getDrinkId(data))
 

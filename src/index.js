@@ -1,43 +1,48 @@
 // define global variables
 const drinkImageMenu = document.querySelector('#drink-menu');
 
+const drinkTitle = document.querySelector('.name')
+const drinksImage = document.querySelector('.detail-image')
+const drinkInstructions = document.getElementById('recipe-display')
+const drinkIngredientsUl = document.querySelector('#ingredients-list')
+
+const randomButton = document.querySelector("#random-button");
+
 const userInputMocktail = document.getElementById("add-new-form");
 const userInputName = document.querySelector('#new-name');
 const userInputImage = document.querySelector('#new-image');
 const userInputIngredients = document.querySelector('#new-ingredients');
 const userInputInstructions = document.querySelector('#new-instructions');
 
-const randomButton = document.querySelector("#random-button");
-
-const drinkTitle = document.querySelector('.name')
-const drinksImage = document.querySelector('.detail-image')
-const drinkInstructions = document.getElementById('recipe-display')
-const drinkIngredientsUl = document.querySelector('#ingredients-list')
-
-
-// event listener to fetch starting cocktail and mocktail list
-// event listeners to set up submit button and random button
+// event listener to fetch starting mocktail list, set up random and submit buttons
 document.addEventListener('DOMContentLoaded', function() {
-    fetchRandomCocktail();
+    fetchRandomMocktail();
     fetchMocktails();
+    randomButton.addEventListener('click', fetchRandomMocktail);
     userInputMocktail.addEventListener('submit', createNewMocktail);
-    randomButton.addEventListener('click', fetchRandomCocktail);
 })
 
-// fetch function for random cocktail to display on page
-function fetchRandomCocktail() {
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+// array of all mocktail ID numbers (manually created from API)
+const mocktailArray = [12560, 12562, 12862, 15106, 12710, 12564, 12708, 12654, 12656, 12658, 12572, 12730, 12732, 12734, 17108, 12890, 12736, 12668, 12768, 12670, 12672, 12674, 12712, 12954, 12738, 12770, 17176, 12688, 12720, 12714, 12690, 12698, 12696, 12692, 12694, 12702, 12704, 12716, 12774, 12776, 12744, 12746, 12748, 12618, 12718, 15092, 12630, 12750, 13032, 12780, 13036, 12722, 12724, 12782, 12784, 12786, 12726, 12728];
+
+// fetch function to pick a random mocktail to display on page
+function fetchRandomMocktail() {
+    let rand = Math.floor(Math.random()*mocktailArray.length);
+    let randValue = mocktailArray[rand];
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${randValue}`)
+    // fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
     .then(res => res.json())
     .then(data => renderDrink(data))
 }
 
-// fetch function for all mocktails
+// fetch function to get all mocktails
 function fetchMocktails(){ 
     fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
     .then(res => res.json())
     .then(data => addDrinkToMenu(data))
 }
 
+// function to render one featured mocktail in the browser
 function renderDrink(data) {
     let drinksArr = data
     drinkTitle.innerHTML = drinksArr.drinks[0].strDrink
@@ -51,6 +56,7 @@ function renderDrink(data) {
     createIngredients(data)
 }
 
+// function to iterate through ingredients and measurements, and display them in browser
 function createIngredients(data){
     drinkIngredientsUl.innerHTML=""
     for (i = 1; i < 16; i ++) {
@@ -68,84 +74,7 @@ function createIngredients(data){
     }
 }
 
-    // const drinkIng1 = data.drinks[0].strIngredient1
-    // const drinkMeasure1 = data.drinks[0].strMeasure1
-    // newLi = document.createElement('li')
-    // if (drinkMeasure1 !== null && drinkIng1 !== null) {
-    //     newLi.textContent = `${drinkIng1}, ${drinkMeasure1}`;
-    //     drinkIngredientsUl.append(newLi);
-    // } else if (drinkIng1 !== null){
-    //     newLi.textContent = drinkIng1
-    //     drinkIngredientsUl.append(newLi)
-    // } else {
-    //     newLi.innerHTML = ""
-    // }
-
-//     const drinkIng2 = data.drinks[0].strIngredient2
-//     const drinkMeasure2 = data.drinks[0].strMeasure2
-//     newLi = document.createElement('li')
-//     if (drinkMeasure2 !== null && drinkIng2 !== null) {
-//         newLi.textContent = `${drinkIng2}, ${drinkMeasure2}`
-//         drinkIngredientsUl.append(newLi)
-//     } else if (drinkIng2 !== null){
-//         newLi.textContent = drinkIng2
-//         drinkIngredientsUl.append(newLi)
-//     } else {
-//         newLi.innerHTML = ""
-//     }
-
-//     const drinkIng3 = data.drinks[0].strIngredient3
-//     const drinkMeasure3 = data.drinks[0].strMeasure3
-//     newLi = document.createElement('li')
-//     if (drinkMeasure3 !== null && drinkIng3 !== null) {
-//         newLi.textContent = `${drinkIng3}, ${drinkMeasure3}`
-//         drinkIngredientsUl.append(newLi)
-//     } else if (drinkIng3 !== null){
-//         newLi.textContent = drinkIng3
-//         drinkIngredientsUl.append(newLi)
-//     } else {
-//         newLi.innerHTML = ""
-//     }
-
-//     const drinkIng4 = data.drinks[0].strIngredient4
-//     const drinkMeasure4 = data.drinks[0].strMeasure4
-//     newLi = document.createElement('li')
-//     if (drinkMeasure4 !== null && drinkIng4 !== null) {
-//         newLi.textContent = `${drinkIng4}, ${drinkMeasure4}`
-//         drinkIngredientsUl.append(newLi)
-//     } else if (drinkIng4 !== null){
-//         newLi.textContent = drinkIng4
-//         drinkIngredientsUl.append(newLi)
-//     } else {
-//         newLi.innerHTML = ""
-//     }
-
-//     const drinkIng5 = data.drinks[0].strIngredient5
-//     const drinkMeasure5 = data.drinks[0].strMeasure5
-//     newLi = document.createElement('li')
-//     if (drinkMeasure5 !== null && drinkIng5 !== null) {
-//         newLi.textContent = `${drinkIng5}, ${drinkMeasure5}`
-//         drinkIngredientsUl.append(newLi)
-//     } else if (drinkIng5 !== null){
-//         newLi.textContent = drinkIng5
-//         drinkIngredientsUl.append(newLi)
-//     } else {
-//         newLi.innerHTML = ""
-//     }
-//     const drinkIng6 = data.drinks[0].strIngredient6
-//     const drinkMeasure6 = data.drinks[0].strMeasure6
-//     newLi = document.createElement('li')
-//     if (drinkMeasure6 !== null && drinkIng6 !== null) {
-//         newLi.textContent = `${drinkIng6}, ${drinkMeasure6}`
-//         drinkIngredientsUl.append(newLi)
-//     } else if (drinkIng6 !== null){
-//         newLi.textContent = drinkIng6
-//         drinkIngredientsUl.append(newLi)
-//     } else {
-//         newLi.innerHTML = ""
-//     }
-// }
-
+// function to append all fetched mocktails to the photo menu
 function addDrinkToMenu(data) {
     let drinksObj = Object.values(data);
     let nestedDrinks = drinksObj[0];
@@ -155,7 +84,6 @@ function addDrinkToMenu(data) {
         newImg.src = nestedDrinks[i].strDrinkThumb;
         drinkImageMenu.appendChild(newImg);
         newImg.idDrink = nestedDrinks[i].idDrink;
-        // console.log(newImg.idDrink)
         newImg.addEventListener('click', () => {
             fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${newImg.idDrink}`)
             .then(res => res.json())
@@ -164,6 +92,7 @@ function addDrinkToMenu(data) {
     }
 };
 
+// function to create a mocktail from user input after form is submitted
 const createNewMocktail = event => {
     event.preventDefault();
     const userInputMocktail = {
@@ -178,6 +107,7 @@ const createNewMocktail = event => {
     }
 }
 
+// function to create a new picture in the menu from the user submission
 function addUserDrink(data) {
     const newImg = document.createElement('img');
     newImg.className = "menu-image";
@@ -189,6 +119,7 @@ function addUserDrink(data) {
     userInputInstructions.value = ""
 }
 
+// function to put the user's drink in the browser if its new photo is clicked
 function featureUserDrink(data){
     drinkTitle.innerHTML = data.strDrink
     drinksImage.src = data.strDrinkThumb

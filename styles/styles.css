@@ -58,6 +58,10 @@ main {
   cursor: all-scroll;
 }
 
+#recipe-display{
+  font-size: large;
+}
+
 #drink-menu img:last-child {
   margin-right: 0;
 }

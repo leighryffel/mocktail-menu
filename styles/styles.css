@@ -1,84 +1,61 @@
-/* CAKE STYLING BELOW */
-
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 14px;
   background-color: rgb(157, 216, 184);
   width: auto;
-}
-
-nav {
-  width: 25vw;
-  height: 100vh;
+  padding: 10px;
 }
 
 header {
-  float: left;
-  width: 225px;
+  background-color:rgb(206, 238, 239);
+  display: block;
+  width: auto;
   height: auto;
-  border-radius: 0 0 6px 0;
+  border-radius: 6px 6px 6px 6px;
   padding: 10px;
-  margin-right: 10px;
 }
 
 h1 {
   font-size: 52px;
   color: rgb(230, 141, 236);
   margin: 10px 0;
-  font-family: "Great Vibes";
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  padding: 10px;
 }
 
-h2 { 
-  font-family: "Great Vibes";
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style: none;
+.name h2 { 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
 }
 
 main {
-  float: left;
+  float: center;
   margin-left: 100px;
   width: 200px;
 }
 
-#vibes-list {
-  overflow: scroll;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  max-width: fit-content;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgb(137, 137, 232) 10px,
-    lavender 20px
-  );
-}
-
-/* #drink-menu {
-    display: flex;
-    flex-direction: row;
-} */
 #drink-menu {
   display: flex;
+  flex-direction: row;
   overflow-x: auto;
   margin: 1rem 0;
   max-width: calc(100vw - 2rem);
+  cursor: all-scroll;
+}
+
+#welcome {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:larger;
 }
 
 #drink-menu img {
   flex: 0 1 auto;
   height: 150px;
   margin-right: 0.5rem;
-  cursor: pointer;
+  cursor: all-scroll;
 }
 
 #drink-menu img:last-child {
@@ -91,27 +68,6 @@ main {
 
 .detail-image {
   height: 350px;
-}
-
-
-#vibes-list li {
-  font-size: 2vh;
-  margin-top: 5vh;
-  padding-top: 5vh;
-  background-color: rgb(230, 141, 236);
-  border-top-left-radius: 60%;
-  border-top-right-radius: 60%;
-  border-bottom-right-radius: 40%;
-  border-bottom-left-radius: 40%;
-  height: 7vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-#vibes-list li:hover {
-  color: white;
 }
 
 .drink-details h2 {
@@ -132,13 +88,15 @@ main {
 
 form {
   width: 450px;
-  margin: 0 auto 50px auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
 }
 
 textarea {
   display: block;
-  width: 100%;
-  height: 100px;
+  width: 40%;
+  height: 10px;
   border: 1px solid gray;
   padding: 5px;
   font-size: 14px;
@@ -147,20 +105,27 @@ textarea {
 
 form button[type="submit"] {
   border: none;
+  font-family: Georgia;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  background-color: cornflowerblue;
-  color: #fff;
+  background-color: rgb(237, 118, 89);
+  color: rgb(0, 0, 0);
   padding: 7px 10px;
   cursor: pointer;
 }
 
-#review-list li {
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
+#random-button{
+  border: none;
+  font-family: Georgia;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: rgb(237, 118, 89);
+  color: rgb(0, 0, 0);
+  padding: 7px 10px;
+  cursor: pointer;
 }
 
 .detail-image {
@@ -169,87 +134,5 @@ form button[type="submit"] {
 
 .drink-detail {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    width: 75%;
 }
-
-/* RAMEN STYLING BELOW */
-/* * {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    padding: 1rem;
-    text-align: center;
-    background-color: #fafafa;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header {
-    padding: 0.5rem;
-    width: 100%;
-    color: white;
-    background-color: black;
-  }
-  
-  
-  .name,
-  .restaurant {
-    position: absolute;
-    left: 10px;
-    padding: 0.25rem 5rem 0.25rem 1rem;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .name {
-    bottom: 60px;
-  }
-  
-  .restaurant {
-    bottom: 20px;
-  }
-  
-  form {
-    margin: 1rem 0;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  input,
-  textarea {
-    font-size: 1rem;
-    border: 1px solid black;
-    background-color: white;
-    padding: 0.5rem;
-    margin: 0.25rem 0;
-    width: 100%;
-  }
-  
-  input[type="submit"] {
-    color: white;
-    border: 1px solid white;
-    background-color: black;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  input[type="submit"]:active {
-    background-color: gray;
-  }
-  
-  form h4 {
-    width: 100%;
-    padding: 0.25rem;
-    margin: 0.5rem 0;
-    color: white;
-    background-color: black;
-  }
-   */

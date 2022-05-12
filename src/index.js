@@ -56,6 +56,10 @@ function renderDrink(data) {
     createIngredients(data)
 }
 
+
+
+
+
 // function to iterate through ingredients and measurements, and display them in browser
 function createIngredients(data){
     drinkIngredientsUl.innerHTML=""
@@ -107,21 +111,21 @@ const createNewMocktail = event => {
     }
 }
 
-// function to create a new picture in the menu from the user submission
 function addUserDrink(data) {
     const newImg = document.createElement('img');
     newImg.className = "menu-image";
     newImg.src = data.strDrinkThumb;
     drinkImageMenu.prepend(newImg);
-    userInputName.value = ""
-    userInputImage.value = ""
-    userInputIngredients.value = ""
-    userInputInstructions.value = ""
-}
-
-// function to put the user's drink in the browser if its new photo is clicked
-function featureUserDrink(data){
-    drinkTitle.innerHTML = data.strDrink
-    drinksImage.src = data.strDrinkThumb
-    drinkInstructions.innerHTML = data.strInstructions
+    function featureUserDrink(){
+        newImg.addEventListener('click', function() {
+           drinkTitle.textContent = userInputName.value
+           drinksImage.src = userInputImage.value
+           drinkInstructions.textContent = userInputInstructions.value
+           drinkIngredientsUl.textContent = ''
+           let newLi = document.createElement('li')
+           newLi.innerHTML = userInputIngredients.value
+           drinkIngredientsUl.append(newLi)
+        })
+    }
+    featureUserDrink()
 }

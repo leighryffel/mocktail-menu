@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- Head Section With Source Links -->
   <head>
       <link rel="stylesheet" href="styles/styles.css">
       <script defer src="./src/index.js"></script>
       <title>Phase 1 Project: Making Mocktails</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-
 <!-- Body Section with Page Content -->
   <body>
     <header>
+      <img class="girl-with-drink" src="images/pop-art-girl-drinks-cocktail-and-shows-sign-ok-vector-31534056.jpeg">
       <h1 id="title">Making Mocktails</h1>
     </header>
-
+<div class="drink-display">
     <!-- Random Cocktail Generator -->
     <p id="welcome">Use this site to get mocktail inspiration, or choose a mocktail from our photo menu. User-submitted recipes encouraged!</p>
     <button type="button" id="random-button">Show Random Mocktail</button>
     <div id="drink-details">
       <h2 class="name"></h2>
       <img class="detail-image" alt="Mocktail" />
-      <h3 class="ingredients" id="ingredients-list">Ingredients</h3>
+      <h3 class="ingredients" id="ingredients-list">
+        <ul>
+        </ul>
+      </h3>
       <h3>Recipe</h3>
       <p id="recipe-display"></p>
     </div>
-
+    </div>
 <!-- Mocktail Photo Menu -->
       <h3>Click on a Mocktail to View Recipe</h3>
       <div id="drink-menu"></div>
-
       <div id=new-mocktail>
       <h3>Submit a New Mocktail Recipe</h3>
       <form id="add-new-form">
@@ -43,9 +45,8 @@
         <button type="submit">Submit Mocktail</button>
       </form>
     </div>
-    <audio id="music" loop>
-      <source src="https://dl.dropbox.com/s/57hjcyz47o4us25/audio.mp3">
-  </audio>
   </body>
-  
+  <footer>
+    <h3>Icon Art by lyi Kon with VectorStock</h3>
+  </footer>
 </html>

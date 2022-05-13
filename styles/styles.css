@@ -59,7 +59,7 @@ main {
 }
 #recipe-display{
   font-size: large;
-  text-align: left;
+  text-align: center;
 }
 #drink-menu img:last-child {
   margin-right: 0;

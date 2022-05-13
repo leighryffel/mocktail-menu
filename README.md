@@ -1,15 +1,13 @@
 # Em and Leigh's Project
 
 ## Basic Story
-We want to create an app that makes popular mocktails accessible, displays their ingredient lists, a recipe for mixing the drink, and necessary equipment. We want users to be able to see pictures of all of the drinks, click on a particular drink, and view its recipe. We also want users to be able to search for a particular ingredient and view all drinks that contain that ingredient.
+We want to create an app that makes popular mocktails accessible, displays their ingredient lists, a recipe for mixing the drink, and drink photo. We want users to be able to see pictures of all of the drinks, click on a particular drink, and view its recipe. We also want users to be able to upload their own mocktail recipe and render that new mocktail in the photo menu.
 
 ## Core Features of MVP
- - Search Bar
- - Ingredients and equipment display
- - Photos of all mocktails
- - Header, navigation bar
- - Buttons to display drinks by "vibes" or "seasons"
- - Form of some kind that uploads a new drink and persists
+ - Upload Form Bar
+ - Ingredients and recipe display
+ - Photo menu of all mocktails
+ - Header with photo/logo
 
 ## API Data We Will Use
 * www.thecocktaildb.com/api/

@@ -6,8 +6,9 @@ body {
   background-color: rgb(157, 216, 184);
   width: auto;
   padding: 10px;
+  border: 10px solid;
+  border-color: #89BFDD
 }
-
 header {
   background-color:rgb(206, 238, 239);
   display: block;
@@ -16,7 +17,11 @@ header {
   border-radius: 6px 6px 6px 6px;
   padding: 10px;
 }
-
+.girl-with-drink {
+  float: left;
+  width: 20%;
+  height: auto;
+}
 h1 {
   font-size: 52px;
   color: rgb(230, 141, 236);
@@ -25,18 +30,15 @@ h1 {
   text-align: center;
   padding: 10px;
 }
-
-.name h2 { 
+.name h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: larger;
 }
-
 main {
   float: center;
   margin-left: 100px;
   width: 200px;
 }
-
 #drink-menu {
   display: flex;
   flex-direction: row;
@@ -45,58 +47,46 @@ main {
   max-width: calc(100vw - 2rem);
   cursor: all-scroll;
 }
-
 #welcome {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size:larger;
 }
-
 #drink-menu img {
   flex: 0 1 auto;
   height: 150px;
   margin-right: 0.5rem;
   cursor: all-scroll;
 }
-
 #recipe-display{
   font-size: large;
+  text-align: left;
 }
-
 #drink-menu img:last-child {
   margin-right: 0;
 }
-
 #drink-detail {
   position: relative;
 }
-
 .detail-image {
   height: 350px;
 }
-
 .drink-details h2 {
   font-size: 32px;
   text-align: center;
   align-items: center;
 }
-
 .drink-details h3 {
   font-size: 24px;
 }
-
 .drink-details img {
   display: block;
   height: 200px;
   margin: 0 auto 25px auto;
+  width:100%;
 }
-
 form {
-  width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
+  align: center;
 }
-
 textarea {
   display: block;
   width: 40%;
@@ -106,7 +96,6 @@ textarea {
   font-size: 14px;
   margin-bottom: 10px;
 }
-
 form button[type="submit"] {
   border: none;
   font-family: Georgia;
@@ -118,11 +107,9 @@ form button[type="submit"] {
   padding: 7px 10px;
   cursor: pointer;
 }
-
 #random-button{
   border: none;
   font-family: Georgia;
-
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
@@ -131,12 +118,13 @@ form button[type="submit"] {
   padding: 7px 10px;
   cursor: pointer;
 }
-
 .detail-image {
     height: 350px;
   }
-
 .drink-detail {
     display: block;
     width: 75%;
+}
+.drink-display {
+  text-align: center;
 }

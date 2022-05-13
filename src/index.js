@@ -14,6 +14,13 @@ const userInputImage = document.querySelector('#new-image');
 const userInputIngredients = document.querySelector('#new-ingredients');
 const userInputInstructions = document.querySelector('#new-instructions');
 
+const title = document.querySelector("#title")
+
+title.addEventListener('click', function() {
+    let audio = document.getElementById('music');
+    audio.play();
+});
+
 // event listener to fetch starting mocktail list, set up random and submit buttons
 document.addEventListener('DOMContentLoaded', function() {
     fetchRandomMocktail();
